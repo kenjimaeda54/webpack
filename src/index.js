@@ -1,26 +1,10 @@
-import Title from './components/title';
-import ImgBob from './components/load-img';
-import Button from "./components/button";
+import Title from "./components/title"
 
-const components = new Title();
-components.create('Hello World');
 
-const img = new ImgBob();
-img.load();
+const title = new Title();
+title.build("Hello World");
 
-const button = new Button();
-button.build();
 
-//rest objet
-const obj = {
-  name: 'Bob',
-  age: '30',
-  city: 'São Paulo',
-  height: '1.80',
-  weight: '70'
-}
-
-const { name,age, ...rest } = obj;
-console.log("name",name);
-console.log("idade",age);
-console.log("aqui e o rest",rest);
+//pegando variáveis globais definidas no webpack.config.js
+console.log("porta",port)
+console.log(version)
