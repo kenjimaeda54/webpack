@@ -1,0 +1,18 @@
+$myMetric: 5px;
+$customColor: #000;
+$customFOnt: 14px;
+
+body {
+  .btn {
+    width: 40%;
+    border-radius: $myMetric;
+    border: 1px solid $customColor;
+    padding: $myMetric;
+    color: $customColor;
+    font-size: $customFOnt;
+    cursor: pointer;
+    &:hover {
+      background-color: #00ff;
+    }
+  }
+}
