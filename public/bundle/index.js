@@ -10,6 +10,46 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/button/index.js":
+/*!****************************************!*\
+  !*** ./src/components/button/index.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.scss */ \"./src/components/button/styles.scss\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\n\n\nvar Button = /*#__PURE__*/function () {\n  function Button() {\n    _classCallCheck(this, Button);\n  }\n\n  _createClass(Button, [{\n    key: \"build\",\n    value: function build() {\n      var button = document.createElement('button');\n      button.innerText = \"Click me!\";\n      button.classList.add('btn');\n      document.querySelector('body').appendChild(button);\n    }\n  }]);\n\n  return Button;\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);\n\n//# sourceURL=webpack://loaders-webpack/./src/components/button/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/load-img/index.js":
+/*!******************************************!*\
+  !*** ./src/components/load-img/index.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _assets_bob_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/bob.jpeg */ \"./src/assets/bob.jpeg\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\n\n\nvar ImgBob = /*#__PURE__*/function () {\n  function ImgBob() {\n    _classCallCheck(this, ImgBob);\n  }\n\n  _createClass(ImgBob, [{\n    key: \"load\",\n    value: function load() {\n      var img = document.createElement(\"img\");\n      img.src = _assets_bob_jpeg__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n      img.width = 200;\n      img.height = 200;\n      document.querySelector(\"body\").appendChild(img);\n    }\n  }]);\n\n  return ImgBob;\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ImgBob);\n\n//# sourceURL=webpack://loaders-webpack/./src/components/load-img/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/title/index.js":
+/*!***************************************!*\
+  !*** ./src/components/title/index.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/components/title/styles.css\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\n\n\nvar Components = /*#__PURE__*/function () {\n  function Components() {\n    _classCallCheck(this, Components);\n  }\n\n  _createClass(Components, [{\n    key: \"create\",\n    value: function create(title) {\n      var h1 = document.createElement('h1');\n      h1.innerText = title;\n      h1.classList.add('titleH1');\n      document.body.appendChild(h1);\n    }\n  }]);\n\n  return Components;\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Components);\n\n//# sourceURL=webpack://loaders-webpack/./src/components/title/index.js?");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_title__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/title */ \"./src/components/title/index.js\");\n/* harmony import */ var _components_load_img__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/load-img */ \"./src/components/load-img/index.js\");\n/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/button */ \"./src/components/button/index.js\");\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n\n\n\nvar components = new _components_title__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\ncomponents.create('Hello World');\nvar img = new _components_load_img__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\nimg.load();\nvar button = new _components_button__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nbutton.build(); //rest objet\n\nvar obj = {\n  name: 'Bob',\n  age: '30',\n  city: 'São Paulo',\n  height: '1.80',\n  weight: '70'\n};\n\nvar name = obj.name,\n    age = obj.age,\n    rest = _objectWithoutProperties(obj, [\"name\", \"age\"]);\n\nconsole.log(\"name\", name);\nconsole.log(\"idade\", age);\nconsole.log(\"aqui e o rest\", rest);\n\n//# sourceURL=webpack://loaders-webpack/./src/index.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/button/styles.scss":
 /*!************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/button/styles.scss ***!
@@ -137,46 +177,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 /***/ ((module) => {
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://loaders-webpack/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
-
-/***/ }),
-
-/***/ "./src/components/button/index.js":
-/*!****************************************!*\
-  !*** ./src/components/button/index.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.scss */ \"./src/components/button/styles.scss\");\n\n\nclass Button {\n  build() {\n    const button = document.createElement('button');\n    button.innerText = \"Click me!\";\n    button.classList.add('btn');\n    document.querySelector('body').appendChild(button);\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);\n\n//# sourceURL=webpack://loaders-webpack/./src/components/button/index.js?");
-
-/***/ }),
-
-/***/ "./src/components/load-img/index.js":
-/*!******************************************!*\
-  !*** ./src/components/load-img/index.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _assets_bob_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/bob.jpeg */ \"./src/assets/bob.jpeg\");\n\n\nclass ImgBob {\n  load() {\n    const img = document.createElement(\"img\");\n    img.src = _assets_bob_jpeg__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n    img.width = 200;\n    img.height = 200;\n    document.querySelector(\"body\").appendChild(img);\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ImgBob);\n\n//# sourceURL=webpack://loaders-webpack/./src/components/load-img/index.js?");
-
-/***/ }),
-
-/***/ "./src/components/title/index.js":
-/*!***************************************!*\
-  !*** ./src/components/title/index.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/components/title/styles.css\");\n\n\nclass Components {\n  create(title) {\n    const h1 = document.createElement('h1');\n    h1.innerText = title;\n    h1.classList.add('titleH1');\n    document.body.appendChild(h1);\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Components);\n\n//# sourceURL=webpack://loaders-webpack/./src/components/title/index.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_title__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/title */ \"./src/components/title/index.js\");\n/* harmony import */ var _components_load_img__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/load-img */ \"./src/components/load-img/index.js\");\n/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/button */ \"./src/components/button/index.js\");\n\n\n\n\nconst components = new _components_title__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\ncomponents.create('Hello World');\n\nconst img = new _components_load_img__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\nimg.load();\n\nconst button = new _components_button__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nbutton.build();\n\n//# sourceURL=webpack://loaders-webpack/./src/index.js?");
 
 /***/ })
 

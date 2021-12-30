@@ -10,3 +10,17 @@ img.load();
 
 const button = new Button();
 button.build();
+
+//rest objet
+const obj = {
+  name: 'Bob',
+  age: '30',
+  city: 'São Paulo',
+  height: '1.80',
+  weight: '70'
+}
+
+const { name,age, ...rest } = obj;
+console.log("name",name);
+console.log("idade",age);
+console.log("aqui e o rest",rest);
