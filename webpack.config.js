@@ -36,6 +36,21 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.m?js$/,
+        //precisa excluir node_modules se nao vai dar match
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: { 
+            //babel serve para converter o js novo para o browser
+            //olhar a docs os plugins 
+            //precisa instalar o @babel/core
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-object-rest-spread']
+          }
+        }
       }
     ]
   }
