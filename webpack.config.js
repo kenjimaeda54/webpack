@@ -19,9 +19,22 @@ module.exports = {
         ]
       },
       {
-        test: /\.(JPG|JPEG|PNG)$/,
+        //flag i e case sensitive ou seja nao importa maiúsculo ou minusculo
+        //neste caso extensao do arquivo e  minusculo, mesmo assim copilou motivo 
+        //sigla i
+        test: /\.(JPG|JPEG|PNG)$/i,
         use: [ 
           'file-loader'
+        ]
+      },
+      {
+        test: /\.(scss|sass)$/i,
+        //aqui estamos lindando com o node então precisa instalar 
+        //também o node-sass,mas nao precisa especificar o plugin
+        use: [ 
+          'style-loader',
+          'css-loader',
+          'sass-loader'
         ]
       }
     ]
