@@ -1,51 +1,67 @@
-const path = require('path');
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const path = require("path");
+const { ProvidePlugin } = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 
 module.exports = { 
   mode: "development",
-  entry: "./src/index.tsx",
-  output: { 
-    filename: "index.js",
-    path: path.resolve(__dirname, "public/bundle"),
-    publicPath: "/"
+  //code splitting
+  //técnica de possuir vários arquivos de entrada. 
+  //Normalmente util quando quereremos recursos específicos separados 
+  entry: {
+       index: {
+         import: "./src/index.js",
+         //quando as entradas dependente de mesma lib
+         dependOn: "shared"
+       },
+       next: {
+          import: "./src/next.js",
+          dependOn: "shared"
+       },
+       //nome da lib que será utilizada
+       shared: "lodash",
   },
-  resolve: { 
-    extensions: [".ts", ".tsx", ".js", ".json"],
-    alias: {
-      '@': path.resolve(__dirname, "src")
-    }
+  output: { 
+    path: path.resolve(__dirname, "public/bundle"),
+    //deixando dinamico para melhorar o build
+    //este casso estou utilizando optimization
+    filename: "[name].js"
+  },
+  //devServer melhorar o build
+  devServer: { 
+    historyApiFallback: true,
+    hot: true,
+    port: 8000,
+    static: {
+      directory: "./public/bundle"
+    },
   },
   module: { 
-    rules: [ 
-       {
-        test: /\.ts(x?)$/,
+    //babel loader vai melhorar o build
+    rules: [
+      {
+        test: /\.js$/,
         exclude: /node_modules/,
-        use:  "ts-loader"      
-       },
-       {
-        test: /\.css$/,
-        use: [ 
-          "style-loader",
-          "css-loader"
-        ]
-       },
-    ]
+        use: "babel-loader",
+        include: path.resolve(__dirname, "src")
+      }
+    ],
   },
-  devServer: { 
-    static: {
-      directory: './public'
-    },
-    port: 4300,
-    historyApiFallback: true,
-    devMiddleware: {
-      writeToDisk: true,
-    },
-  },
-  externals: {
-    react: "React",
-    'react-dom': 'ReactDOM'
-  },
-  plugins: [
-    new CleanWebpackPlugin(),
-  ]
+  plugins: [ 
+    //ProvidePlugin vai lidar com importações globais
+    //Shimming
+    new ProvidePlugin({
+      _: "lodash"
+    }),
+    new HtmlWebpackPlugin({
+      title: "Resources webpack"
+    })
+  ],
+  //isso vai melhorar o tempo de build  
+  //preciso deixar agora o filename seja dinamico e instalar
+  //html plugin para nao se preocupar com a referencia do html 
+  //no bundle
+  optimization: {
+     runtimeChunk: true,
+  }
 }
